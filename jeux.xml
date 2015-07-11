@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+
+<jeux xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:SchemaLocation="jeux.xsd">
+
+	<jeu>
+		<informations>
+			<nom>Final Fantasy X</nom>
+			<editeurs>
+				<editeur>Squaresoft</editeur>
+			</editeurs>
+			<developpeurs>
+				<developpeur>Sony</developpeur>
+			</developpeurs>
+			<sorties>
+				<sortie plateforme="ps2" pays="france">29 Mai 2002</sortie>
+				<sortie plateforme="ps2" pays="etats-unis">17 Décembre 2001</sortie>
+			</sorties>
+			<genres>
+				<genre>RPG</genre>
+			</genres>
+			<themes>
+				<theme>Fantastique</theme>
+			</themes>
+			<classification>+ 12</classification>
+			<modes>
+				<mode>Jouable en solo</mode>
+			</modes>
+			<nbMaximumJoueurs>non</nbMaximumJoueurs>
+			<sites>
+				<site pays="france">www.ffx-europe.com</site>
+			</sites>
+			<modelesEconomiques>
+				<modeleEconomique>payant à l'acquisition</modeleEconomique>
+			</modelesEconomiques>
+			<description>Final Fantasy X est un jeu de rôle sorti sur Playstation 2. 
+				Le monde de Spira vit dans la crainte d'une entité maléfique nommée Sin. 
+				Vous incarnez une équipe menée par le jeune Tidus dans une quête pour libérer la terre de l'oppression, 
+				uniquement possible au prix d'une invocation finale...
+			</description>
+			<supports>
+				<support>DVD</support>
+			</supports>
+		</informations>
+		<tests>
+			<test plateforme="PS1" date-publication="13/07/2009" type="redaction">
+				<entetes>
+					<auteur id="01" fonction="journaliste">Super pseudo</auteur>
+					<lien>http://www.jeuxvideo.com/articles/0001/00010672-final-fantasy-vii-test.htm</lien>
+					<titreTest>Final Fantasy VII</titreTest>
+					<resume>S'il est des œuvres d'art qui résistent à l'épreuve du temps aux yeux du public, 
+					il existe aussi des jeux qui ne se démodent pas dans le cœur des joueurs. La grande lignée 
+					des Final Fantasy fait sans conteste partie de cette catégorie de titres qui auront su, au 
+					fil du temps, imposer leur loi dans l'univers vidéoludique, et pour quelques-uns de ses 
+					représentants entrer au panthéon des jeux cultes. C'est certainement le cas de Final Fantasy 
+					VII, grand RPG s'il en est, adulé par de nombreux joueurs à travers le monde, et sujet de ce 
+					test. Qu'en est-il réellement ? Quelles sont les spécificités de ce titre ? Qu'est-ce qui a 
+					su faire sa véritable renommée ? Retour sur une étape importante de l'Histoire du jeu vidéo. 
+					</resume>
+					<imageUne format="JPG">http://image.jeuxvideo.com/images-md/ps/f/i/final-fantasy-vii-playstation-ps1-00a.jpg</imageUne>
+				</entetes>
+				<contenu>
+					<bloc type="TEXTE">Lorem Ipsum</bloc>
+					<bloc type="JPG" titre="Super jpg">.jpg</bloc>
+				</contenu>
+				<notes>
+					<note type="graphismes" valeur="17">Lorem ipsum</note>
+					<note type="jouabilite" valeur="18">Lorem ipsum</note>
+					<note type="duree-de-vie" valeur="19">Lorem ipsum</note>
+					<note type="bande-son" valeur="18">Lorem ipsum</note>
+					<note type="scenario" valeur="19">Lorem ipsum</note>
+					<note type="generale" valeur="18">Lorem ipsum</note>
+				</notes>
+			</test>
+			<test plateforme="PC" date-publication="21/05/2010" type="lecteur">
+				<entetes>
+					<auteur id="31" fonction="lecteur">Pseudo pas terrible</auteur>
+					<lien>http://www.jeuxvideo.com/articles/0001/00010672-final-fantasy-vii-test.htm</lien>
+					<titreTest>Final Fantasy VII</titreTest>
+					<resume>S'il est des œuvres d'art qui résistent à l'épreuve du temps aux yeux du public, 
+					il existe aussi des jeux qui ne se démodent pas dans le cœur des joueurs. La grande lignée 
+					des Final Fantasy fait sans conteste partie de cette catégorie de titres qui auront su, au 
+					fil du temps, imposer leur loi dans l'univers vidéoludique, et pour quelques-uns de ses 
+					représentants entrer au panthéon des jeux cultes. C'est certainement le cas de Final Fantasy 
+					VII, grand RPG s'il en est, adulé par de nombreux joueurs à travers le monde, et sujet de ce 
+					test. Qu'en est-il réellement ? Quelles sont les spécificités de ce titre ? Qu'est-ce qui a 
+					su faire sa véritable renommée ? Retour sur une étape importante de l'Histoire du jeu vidéo. 
+					</resume>
+					<imageUne format="JPG">http://image.jeuxvideo.com/images-md/ps/f/i/final-fantasy-vii-playstation-ps1-00a.jpg</imageUne>
+				</entetes>
+				<contenu>
+					<bloc type="TEXTE">Lorem Ipsum</bloc>
+					<bloc type="JPG" titre="Super jpg">.jpg</bloc>
+				</contenu>
+				<notes>
+					<note type="graphismes" valeur="15">Lorem ipsum</note>
+					<note type="jouabilite" valeur="18">Lorem ipsum</note>
+					<note type="duree-de-vie" valeur="19">Lorem ipsum</note>
+					<note type="bande-son" valeur="18">Lorem ipsum</note>
+					<note type="scenario" valeur="17">Lorem ipsum</note>
+					<note type="generale" valeur="17">Lorem ipsum</note>
+				</notes>
+			</test>
+		</tests>
+		<opinions>
+			<!-- avis de la redaction ou avis des lecteurs qui comporte une note, le nom de la personne qui poste l'avis et qui a testé le jeu 
+			et un texte pour justifier la note -->
+			<opinion type="redaction">
+				<redacteur>
+					<noteGlobale>15/20</noteGlobale>
+					<testeur>Epyon</testeur>
+					<texte>Lorem ipsum</texte>
+				</redacteur>
+			</opinion>
+			<opinion type="lecteur">
+				<redacteur>
+					<noteGlobale>13/20</noteGlobale>
+					<testeur>Blop</testeur>
+					<texte>Lorem ipsum</texte>
+				</redacteur>
+				<redacteur>
+					<noteGlobale>17/20</noteGlobale>
+					<testeur>toto</testeur>
+					<texte>Lorem ipsum</texte>
+				</redacteur>
+			</opinion>
+		</opinions>
+		<medias>
+			<media type="video">
+				<titreMedia>Skyforge nous présente son Lumencien</titreMedia>
+				<lienMedia>Lien Video</lienMedia>
+				<platforms>
+					<platform type="PC">PC</platform>
+					<platform type="PS4">PS4</platform>
+				</platforms>
+				<date>01/01/2015</date>
+				<typeMedia type="BA">Bande-Annonce</typeMedia>
+				<descriptionMedia>Lorem Ipsum</descriptionMedia>	
+				<tags>
+					<tag type="PS4">PS4</tag>
+					<tag type="Gaming">Gaming</tag>
+				</tags>
+				<nbVue>1200</nbVue>	
+			</media>
+			<media type="image">
+				<titreMedia>Skyforge nous présente son Lumencien</titreMedia>
+				<lienMedia>Lien image</lienMedia>
+				<platforms>
+					<platform type="PC">PC</platform>
+					<platform type="PS4">PS4</platform>
+				</platforms>
+				<date>01/01/2015</date>
+				<descriptionMedia>Lorem Ipsum</descriptionMedia>	
+				<tags>
+					<tag type="PS4">PS4</tag>
+					<tag type="Gaming">Gaming</tag>
+				</tags>
+				<nbVue>1200</nbVue>	
+			</media>
+		</medias>
+	</jeu>
+
+</jeux>

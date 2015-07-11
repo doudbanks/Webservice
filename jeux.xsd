@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="nom"  type="xs:token" />
+	
+	<xs:element name="editeurs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="editeur" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="developpeurs">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="developpeur" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="sorties">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="sortie" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="plateforme" type="xs:string" use="required" />
+								<xs:attribute name="pays" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="genres">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="genre" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="themes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="theme" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="classification" type="xs:string" />
+	
+	<xs:element name="modes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="mode" maxOccurs="unbounded" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="nbMaximumJoueurs" type="xs:string" />
+	
+	<xs:element name="sites">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="site" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="pays" type="xs:string" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="modelesEconomiques">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="modeleEconomique" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="description" />
+	
+	<xs:element name="supports">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="support" maxOccurs="unbounded" minOccurs="0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="informations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="nom" />
+				<xs:element ref="editeurs" /> 
+				<xs:element ref="developpeurs" />
+				<xs:element ref="sorties" />
+				<xs:element ref="genres" /> 
+				<xs:element ref="themes" />
+				<xs:element ref="classification" />
+				<xs:element ref="modes" /> 
+				<xs:element ref="nbMaximumJoueurs" />
+				<xs:element ref="sites" />
+				<xs:element ref="modelesEconomiques" /> 
+				<xs:element ref="description" />
+				<xs:element ref="supports" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="auteur">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="id" type="xs:integer" use="required" />
+					<xs:attribute name="fonction" type="xs:string" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="lien" type="xs:anyURI" />
+	
+	<xs:element name="titreTest" type="xs:normalizedString" />
+	
+	<xs:element name="resume" type="xs:string" />
+	
+	<xs:element name="imageUne" >
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:anyURI">
+					<xs:attribute name="format" type="xs:token" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="entetes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="auteur" />
+				<xs:element ref="lien" /> 
+				<xs:element ref="titreTest" />
+				<xs:element ref="resume" />
+				<xs:element ref="imageUne" minOccurs="0" /> 
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="contenu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="bloc" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="type" type="xs:token" use="required" />
+								<xs:attribute name="titre" type="xs:normalizedString" use="optional" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="notes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="note" maxOccurs="unbounded" >
+					<xs:complexType>
+						<xs:simpleContent>
+							<xs:extension base="xs:string">
+								<xs:attribute name="type" type="xs:token" use="required" />
+								<xs:attribute name="valeur" type="xs:integer" use="required" />
+							</xs:extension>
+						</xs:simpleContent>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="test">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="entetes" />
+				<xs:element ref="contenu" /> 
+				<xs:element ref="notes" />
+			</xs:sequence>
+			<xs:attribute name="plateforme" type="xs:normalizedString" use="required" />
+			<xs:attribute name="date-publication" type="xs:normalizedString" use="required" />
+			<xs:attribute name="type" type="xs:token" use="required" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="tests">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="test" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="noteGlobale" type="xs:normalizedString" />
+	
+	<xs:element name="testeur" type="xs:normalizedString" />
+	
+	<xs:element name="texte" type="xs:normalizedString" />
+	
+	<xs:element name="redacteur">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="noteGlobale" />
+				<xs:element ref="testeur" /> 
+				<xs:element ref="texte" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="opinion">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="redacteur" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:normalizedString" use="required" />
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="opinions">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="opinion" minOccurs="0" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="titreMedia" type="xs:string"/>
+	
+	<xs:element name="lienMedia" type="xs:anyURI"/>
+	
+	<xs:element name="platform">
+		<xs:complexType>
+			<xs:simpleContent>
+	            <xs:extension base="xs:string">
+	                <xs:attribute name="type" type="xs:string"/>
+	            </xs:extension>				 
+	        </xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="platforms">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="platform" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="date" type="xs:string"/>
+	
+	<xs:element name="typeMedia">
+		<xs:complexType>
+			<xs:simpleContent>
+	            <xs:extension base="xs:string">
+	                <xs:attribute name="type" type="xs:string"/>
+	            </xs:extension>
+	        </xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="descriptionMedia" type="xs:string"/>
+	
+	<xs:element name="tag">
+		<xs:complexType>
+			<xs:simpleContent>
+	            <xs:extension base="xs:string">
+	                <xs:attribute name="type" type="xs:string"/>
+	            </xs:extension>
+	        </xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="tags">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="tag" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="nbVue" type="xs:positiveInteger"/>
+
+	<xs:element name="media">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="titreMedia" minOccurs="0"/>
+				<xs:element ref="lienMedia" minOccurs="0"/>
+				<xs:element ref="platforms" minOccurs="0"/>
+				<xs:element ref="date" minOccurs="0"/>
+				<xs:element ref="typeMedia" minOccurs="0"/>
+				<xs:element ref="descriptionMedia" minOccurs="0"/>
+				<xs:element ref="tags" minOccurs="0"/>
+				<xs:element ref="nbVue" minOccurs="0"/>				
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="medias">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="media" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="jeu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="informations" />
+				<xs:element ref="tests" />
+				<xs:element ref="opinions" />
+				<xs:element ref="medias" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="jeux">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="jeu"  maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
